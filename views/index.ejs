@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" onselect='return false' ondragstart='return false' onselectstart='return false'>
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'>
+	<title>倾城 - 博客</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/index.css">
+	<link rel="icon" href="/images/bitbug_favicon.ico" type='image/x-icon'>
+</head>
+<body ondragstart='return false'>
+	<div id="progress"><p>0%</p></div>
+<!-- 点击回到顶部 -->
+	<% include backtop.ejs %>
+<!-- 网站加载进度条 -->
+	<script>
+		var oP = document.getElementById('progress').getElementsByTagName('p')[0];
+		var percent = 0;
+		move( 15 )
+		function move(num,endFn){
+			var timer = setInterval(function(){
+				percent = parseInt( oP.innerHTML );
+				percent<num?oP.innerHTML = percent+1+'%':clearInterval(timer);
+				endFn&&endFn();
+			},50);
+		};
+	</script>
+<!-- nav导航部分 -->
+	<% include header.ejs %>
+<!-- 加载1 -->
+	<script>
+		move(30);
+	</script>
+<!-- 轮播图部分 -->
+	<div id='carousel' oncontextmenu="return false" class="container-fluid gradient">
+		<div class="container">
+			<div class='show'><img src="/images/case/banner.png" class='img-responsive img-rounded' alt=""></div>
+		</div>
+	</div>
+<!-- 加载2 -->
+	<script>
+		move(50);
+	</script>
+<!-- subNav 副导航 -->
+	<div id='subNav' class="container-pluid">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-md-2 col-sm-2 icon">
+					<div><a href="http://wpa.qq.com/msgrd?V=1&Uin=27276971" target="_blank"><img src="/images/case/qq.png" class='img-circle img-responsive' alt="QQ"></a></div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 icon">
+					<div class="hover"><a href="mailto:27276971@qq.com" target="_blank"><img src="/images/case/email.jpg" class='img-circle img-responsive' alt="email"></a></a></div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 icon">
+					<div><a href="https://github.com/justcodej" target="_blank"><img src="/images/case/timg.png" class='img-circle img-responsive' alt="Github"></a></div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 icon">
+					<div><a href="http://www.weibo.com/followqingcheng/" target='_blank'><img src="/images/case/sina.png" class='img-circle img-responsive' alt="微博"></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 加载3 -->
+	<script>
+		move(65);
+	</script>
+<!-- 个人博客信息 -->
+	<div id='title' class="container-fluid">
+		<h2 class='text-center'>倾城个人博客</h2>
+		<p class="text-center text-muted">Follow your heart</p>
+	</div>
+<!-- 加载4 -->
+	<script>
+		move(80);
+	</script>
+<!-- 内容部分 瀑布流加载-->
+	<div id='content' class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<% for(var i in data){ %>
+					<div class="article col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<div class="detail" style="display: block; transition: 0.3s linear;">
+							<div class="img">
+								<a href="/detail/<%= data[i].id %>.html">
+									<img class="img-responsive" src="<%= data[i].src %>" alt="案例">
+								</a>
+							</div>
+							<div class="info">
+								<a href="/detail/<%= data[i].id %>.html"><%= data[i].de %></a>
+								<p><%= data[i].time %></p>
+								<button class="btn btn-primary pull-right">Like</button>
+							</div>
+						</div>
+					</div>
+                <% } %>
+			</div>
+		</div>
+	</div>
+<!-- 加载完成 -->
+	<script>
+		 move(100,function(){
+		 	if (percent >= 100) {
+		 		//document.getElementById('progress').style.display = 'none';
+		 		$('#progress').stop().fadeOut(function(){
+		 			$(this).remove();
+		 			$('body').css('overflow','	visible');
+		 		});
+		 	}
+		 });
+	</script>
+<!-- floor -->
+	<% include floor.ejs %>
+	<script type="text/javascript" src='/js/jquery-1.12.1.min.js'></script>
+	<script type="text/javascript" src='/js/bootstrap.min.js'></script>
+	<script type="text/javascript" src="js/color.js"></script>
+	<script type="text/javascript" src="/js/canvas-nest.min.js"></script>
+	<script type="text/javascript" src='/js/index.js'></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "dependencies": {
+    "async": "latest",
+    "body-parser": "latest",
+    "cheerio": "^1.0.0-rc.2",
+    "cookie-parser": "latest",
+    "ejs": "latest",
+    "express": "^4.15.3",
+    "express-session": "latest",
+    "forever": "^0.15.3",
+    "multer": "latest",
+    "mysql": "latest",
+    "request": "latest"
+  }
+}

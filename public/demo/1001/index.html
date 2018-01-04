@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" onselectstart="return false">
+<head>
+	<meta charset="UTF-8">
+	<title>像素小鸟</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div id="box">
+
+		<!-- 开始画面 -->
+		<p class="score">0</p>
+		<div class="ad"></div>
+		<div class="bird"></div>
+		<div class="city"></div>
+		<div class="infinite"></div>
+		<div class="bottom"></div>
+
+		<!-- 弹出结果 -->
+		<div class="over"></div>
+		<div class="tip">
+			<div class="birdlogo"></div>
+			<p class="score">0</p>
+			<p class="best">0</p>
+		</div>
+		<div class="start"></div>
+		<ul class="pass">
+			<li>
+				<div class="guandao_up">
+					<div class="up_header"></div>
+				</div>
+				<div class="guandao_down">
+					<div class="down_header"></div>
+				</div>
+			</li>
+			<li>
+				<div class="guandao_up">
+					<div class="up_header"></div>
+				</div>
+				<div class="guandao_down">
+					<div class="down_header"></div>
+				</div>
+			</li>
+			<li>
+				<div class="guandao_up">
+					<div class="up_header"></div>
+				</div>
+				<div class="guandao_down">
+					<div class="down_header"></div>
+				</div>
+			</li>
+			<li>
+				<div class="guandao_up">
+					<div class="up_header"></div>
+				</div>
+				<div class="guandao_down">
+					<div class="down_header"></div>
+				</div>
+			</li>
+		</ul>
+		<!-- 游戏音效 -->
+		<audio id="fly" src="audio/fly.ogg">您的浏览器不支持audio、请升级</audio>
+		<audio id='crash' src="audio/crash.ogg"></audio>
+		<audio id="start" src="audio/start.ogg"></audio>
+		<audio id="gold" src="audio/gold.ogg"></audio>
+	</div>
+	<script type='text/javascript' src='js/jquery-1.12.1.min.js'></script>
+	<script type='text/javascript' src='js/index.js'></script>
+</body>
+</html>

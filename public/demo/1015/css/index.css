@@ -1,0 +1,35 @@
+*{margin: 0;padding: 0;}
+#con{
+	height: 30px;
+}
+#con p{
+	height: 40px;
+}
+#con p input{
+	width: 250px;
+	height: 30px;
+	font-size: 14px;
+	text-indent: 10px;
+	outline:none;
+}
+#con p b{
+	width: 16px;
+	height: 16px;
+	background: red;
+	border-radius:100%;
+	color: #fff;
+	text-align: center;
+	line-height: 15px;
+	display: inline-block;
+	display: none;
+}
+#con p .tip{
+	font-size:14px;
+	color: #bbb;
+	display: none;
+}
+#con p .true{
+	font-size:14px;
+	color: red;
+	display: none;
+}

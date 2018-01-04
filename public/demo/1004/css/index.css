@@ -1,0 +1,257 @@
+*{ margin:0;padding:0; }
+li{ list-style: none; }
+a{ text-decoration: none; font-size: 14px; }
+img{ display: block; }
+body{
+	min-width: 320px;
+	max-width: 540px;
+	margin:0 auto;
+	background: #f2f2f2;
+	overflow: hidden;
+}
+.icon{
+	background: url(../images/icon.png) no-repeat center;
+	background-size: 104px 326px;
+}
+.nav{
+	background: url(../images/nav.png) no-repeat center;
+	background-size: 20px auto;
+}
+
+/*header*/
+#header{
+	position: relative;
+	height: 42px;
+	background: #f6f6f6;
+	box-sizing: border-box;
+	padding:0 44px 0 8px;
+}
+#header .login{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 44px;
+	height: 44px;
+}
+#header .login .icon{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -12px;
+	width: 24px;
+	height: 26px;
+	background-position: -59px -193px;
+}
+#header .login .text{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	color: #2EAAE0;
+}
+#header .search{
+	position: relative;
+}
+#header .search>.text{
+	width: 100%;
+	height: 26px;
+	border: none;
+	outline: none;
+	box-shadow: 0 0 5px rgba(0,0,0,.5);
+	margin-top: 8px;
+	font-size: 12px;
+	text-indent: 22px;
+	border-radius: 5px;
+}
+#header .search .icon{
+	position: absolute;
+	top: 12px;
+	left: 5px;
+	display: block;
+	width: 15px;
+	height: 18px;
+	background-position: -59px -276px;
+}
+
+/*轮播*/
+#banner{
+	position: relative;
+	overflow: hidden;
+}
+#banner .img ul{
+	width: 1000%;
+	overflow: hidden;
+	margin-left: -100%;
+}
+#banner .img .tran{
+	transition: .5s cubic-bezier(0.1, 0.57, 0.1, 1);
+}
+#banner .img ul li{
+	float: left;
+	width: 10%;
+}
+#banner .tab{
+	position: absolute;
+	right: 0;
+	bottom: 5px;
+}
+#banner .tab ul li{
+	width: 15px;
+	height: 5px;
+	border-radius: 3px;
+	background: rgba(255,255,255,.7);
+	float: left;
+	margin-right: 5px;
+}
+#banner .tab ul li.on{
+	background: rgba(255,255,255,1);
+}
+/*nav部分*/
+#nav{
+	margin: 5px 0;
+}
+#nav .list{
+	height: 90px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+#nav .list:nth-child(1){
+	background: #ff697a;
+}
+#nav .list:nth-child(2){
+	background: #3d98ff;
+}
+#nav .list:nth-child(3){
+	background: #44c522;
+}
+#nav .list:nth-child(4){
+	background: #fc9720;
+}
+#nav .list li{
+	height: 100%;
+	width: 33.33%;
+	box-sizing: border-box;
+	float: left;
+	border-right: 1px solid #fff;
+}
+#nav .list li:nth-child(3){
+	border-right: 0;
+}
+#nav .list li a{
+	display: block;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+	color: #f1ffff;
+	text-shadow: 0 1px 1px rgba(0,0,0,.5);
+}
+#nav .list li a.first{
+	height: 100%;
+}
+#nav .list li a.first i.icon{
+	display: block;
+	width: 45px;
+	height: 45px;
+	margin: -10px auto 0;
+}
+#nav .list:nth-child(1) li a.first i.icon{
+	background-position: 0 -124px;
+}
+#nav .list:nth-child(2) li a.first i.icon{
+	background-position: 0 -284px;
+}
+#nav .list:nth-child(3) li a.first i.icon{
+	background-position: 0 -180px;
+}
+#nav .list li a.bb{
+	border-bottom: 1px solid #fff;
+}
+/*subNav*/
+#subNav{
+	margin: 7px 0;
+	border-radius: 5px;
+	overflow: hidden;
+}
+#subNav .list{
+	display: flex;
+}
+#subNav .list li{
+	height: 60px;
+	flex: 1;
+	margin: 0 1px 1px 0;
+	background: #fff;
+}
+#subNav .list li i{
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin: 10px auto 5px;
+}
+#subNav .list:nth-child(1) li:nth-child(1) i{
+	background-position: 0 -80px;
+}
+#subNav .list:nth-child(1) li:nth-child(2) i{
+	background-position: 0 -100px;
+}
+#subNav .list:nth-child(1) li:nth-child(3) i{
+	background-position: 0 -120px;
+}
+#subNav .list:nth-child(1) li:nth-child(4) i{
+	background-position: 0 -140px;
+}
+#subNav .list:nth-child(2) li:nth-child(1) i{
+	background-position: 0 -160px;
+}
+#subNav .list:nth-child(2) li:nth-child(2) i{
+	background-position: 0 -180px;
+}
+#subNav .list:nth-child(2) li:nth-child(3) i{
+	background-position: 0 -200px;
+}
+#subNav .list:nth-child(2) li:nth-child(4) i{
+	background-position: 0 -220px;
+}
+#subNav .list:nth-child(3) li:nth-child(1) i{
+	background-position: 0 -20px;
+}
+#subNav .list:nth-child(3) li:nth-child(2) i{
+	background-position: 0 0px;
+}
+#subNav .list:nth-child(3) li:nth-child(3) i{
+	background-position: 0 -40px;
+}
+#subNav .list:nth-child(3) li:nth-child(4) i{
+	background-position: 0 -60px;
+}
+
+#subNav .list li i
+#subNav .list li a{
+	display: block;
+	height: 100%;
+}
+#subNav .list li a span{
+	display: block;
+	font-size: 12px;
+	text-align: center;
+	color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

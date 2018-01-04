@@ -1,0 +1,36 @@
+*{margin: 0; padding: 0;list-style: none;}
+a{text-decoration: none; display: block; cursor:default;}
+
+#box{ position: absolute; top: 0px; left: 0px; }
+
+#box .wrap ul,#box .wrap li{ width:0;height: 0; position: absolute;top: 0;left: 0; }
+
+#box .wrap ul.z1 li.s1>a{ position: absolute; width:100px; height: 100px; border-radius: 0 0 300px; background: rgba(64, 151, 200, 1); z-index: 1; font-size: 14px;color: #fff; text-align: center;line-height: 20px;}
+
+#box .wrap ul.z2 li.s2>a{position: absolute; width: 100px; height: 200px; padding-left: 100px; border-radius: 0 0 300px; background: rgba(133, 166, 177, 0.2); box-shadow: 0 0 10px rgba(0,0,0,.3); z-index:2;}
+
+#box .wrap ul.z2 li.s2>a span,#box .wrap ul.z3 li.s3>a span{ display: block; font-size: 14px;color: #fff; line-height: 20px; text-align: center; }
+
+#box .wrap ul.z3 li.s3>a{ position: absolute; width: 100px;height: 300px;padding-left: 200px;border-radius: 0 0 300px; background: rgba(169, 200, 189, 0.59); box-shadow: 0 0 5px rgba(0,0,0,.3); }
+
+#box .wrap li a{ transform-origin: 0 0 0; }
+
+#box .wrap ul.z2{ transform: rotate(90deg); transition:all 1s ease 0s; }
+#box .wrap ul.z3{ transform: rotate(90deg); transition:all 1s ease 0s; }
+
+#box .wrap ul.z3 li.s3:nth-of-type(5)>a{ transform: rotate(80deg); }
+#box .wrap ul.z3 li.s3:nth-of-type(4)>a{ transform: rotate(60deg); }
+#box .wrap ul.z3 li.s3:nth-of-type(3)>a{ transform: rotate(40deg); }
+#box .wrap ul.z3 li.s3:nth-of-type(2)>a{ transform: rotate(20deg); }
+
+#box .wrap li.s2:nth-of-type(4)>a{ transform: rotate(66deg) }
+#box .wrap li.s2:nth-of-type(3)>a{ transform: rotate(44deg) }
+#box .wrap li.s2:nth-of-type(2)>a{ transform: rotate(22deg) }
+
+#box .wrap ul.z3:nth-of-type(3){ transform: rotate(-90deg); }
+
+#box .wrap ul.z1 li.s1:hover ul.z2{ transform: rotate(0deg); }
+#box .wrap ul.z2 li.s2:hover ul.z3{ transform: rotate(0deg); }
+#box .wrap ul.z1 li.s1:hover >a{ background: rgba(254,153,29,1); }
+#box .wrap ul.z2 li.s2:hover >a{ background: rgba(254,153,29,0.5); }
+#box .wrap ul.z3 li.s3:hover >a{ background: rgba(254,153,29,0.3); }

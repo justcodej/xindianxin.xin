@@ -1,0 +1,193 @@
+*{margin:0;padding:0;list-style: none;}
+body{
+	background: #000;
+	overflow: hidden;
+}
+#box{
+	width: 388px;
+	height: 620px;
+	margin: 100px auto 0;
+	background: #4ec0ca;
+	position: relative;
+	overflow: hidden;
+}
+#box .zzc{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 3;
+	display: none;
+}
+#box>.score{
+	position: absolute;
+	top: 65px;
+	left: 50%;
+	margin-left: -22.5px;
+	width: 45px;
+	height: 45px;
+	text-align: center;
+	text-shadow: 3px 1px 3px #000;
+	color: #fff;
+	line-height: 45px;
+	font-size: 50px;
+	font-family: 'Comic Sans Ms',cursive;
+	font-weight: bold;
+	display: none;
+	z-index: 2;
+}
+#box .ad{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -180px;
+	margin-left: -127px;
+	width: 254px;
+	height: 230px;
+	background: url(../images/tap_bg.png) no-repeat center #4ec0ca;
+	display: none;
+}
+#box .bird{
+	position: absolute;
+	width: 44px;
+	height: 30px;
+	z-index: 2;
+}
+#box .city{
+	position: absolute;
+	bottom: 102px;
+	left: 0;
+	width: 100%;
+	height: 124px;
+	background: url(../images/bg1.png) no-repeat center;
+}
+#box .infinite{
+	 position: absolute;
+	 bottom: 70px;
+	 left: 0;
+	 width: 766px;
+	 height: 32px;
+	 background: url(../images/moveBg.png);
+}
+#box .bottom{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 73px;
+	background: #ddd894;
+}
+#box .over{
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-left: -131px;
+	width: 263px;
+	height: 61px;
+	background: url(../images/gameover_tit.png) no-repeat center;
+	opacity: 0;
+	z-index: 2;
+}
+#box .tip{
+	position: absolute;
+	bottom: -162px;
+	left: 50%;
+	width: 310px;
+	height: 162px;
+	margin-left: -155px;
+	background: url(../images/scorebox.png) no-repeat center;
+	z-index: 2;
+}
+#box .tip .birdlogo{
+	position: absolute;
+	top: 60px;
+	left: 40px;
+	width: 59px;
+	height: 59px;
+	background: url(../images/lcKS0LYOAAAAABJRU5ErkJggg==.png) no-repeat center;
+}
+#box .tip .score,#box .tip .best{
+	position: absolute;
+	right: 20px;
+	width: 45px;
+	height: 45px;
+	text-align: center;
+	text-shadow: 3px 1px 3px #000;
+	color: #fff;
+	line-height: 45px;
+	font-size: 28px;
+	font-family: 'Comic Sans Ms',cursive;
+	font-weight: bold;
+}
+#box .tip .score{
+	top: 38px;
+}
+#box .tip .best{
+	top: 95px;
+}
+#box .start{
+	position: absolute;
+	bottom: 130px;
+	left: 50%;
+	width: 145px;
+	height: 83px;
+	margin-left: -72px;
+	background: url(../images/play.png) no-repeat center;
+	cursor: pointer;
+	display: none;
+	z-index: 2;
+}
+#box .pass{
+	position: absolute;
+	top: 0;
+	left: 390px;
+	width: 836px;
+	height: auto;
+}
+#box .pass li{
+	float: left;
+	width: 69px;
+	height: 520px;
+	margin-right: 140px;
+	position: relative;
+}
+#box .pass li .guandao_up,#box .pass li .guandao_down{
+	position: absolute;
+	left: 0;
+	width: 65px;
+	background: url(../images/zhuzi_bg.png) center;
+}
+#box .pass li .guandao_up{
+	top: 0;
+}
+#box .pass li .guandao_down{
+	bottom: 0;
+}
+#box .pass li .guandao_up .up_header{
+	position: absolute;
+	bottom: -35px;
+	left: -2px;
+	width: 69px;
+	height: 35px;
+	background: url(../images/header2.png) no-repeat center;
+}
+#box .pass li .guandao_down .down_header{
+	position: absolute;
+	top: -35px;
+	left: -2px;
+	width: 69px;
+	height: 35px;
+	background: url(../images/header1.png) no-repeat center;
+}
+@keyframes inf{
+	form { transform: translateX(0px); }
+	to { transform: translateX(-388px); }
+}
+@keyframes bird{
+	0% { transform: translateY(0px); }
+	25% { transform: translateY(10px); }
+	75% { transform: translateY(-10px); }
+	100% { transform: translateY(0px); }
+}

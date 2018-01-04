@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/platform-1.css">
+</head>
+<body>
+<div class="page">
+    <div class="form-div" id="formWarp">
+        <div class="margin-box">
+            <div><label for="">用户名</label><input autofocus type="text" id="uid" easyform="length:4-16;char-normal;real-time;" easytip="disappear:lost-focus;theme:blue;" ajax-message="用户名已存在!"></div>
+            <div><label for="">密码</label><input type="password" id="psw" easyform="length:6-16;" easytip="disappear:lost-focus;theme:blue;"></div>
+        </div>
+        <div class="buttons">
+            <a href="/"><input type="button" value="<< 返回首页"></a>
+            <input value="登 陆" class="submit" type="submit" style="margin-right:20px; margin-top:20px; background-color:#bbb; cursor:not-allowed;" disabled="disabled">
+        </div>
+        <br class="clear">
+    </div>
+</div>
+<script src="/js/jquery-1.12.1.min.js"></script>
+<script src="/js/login-form.js"></script>
+</body>
+</html>

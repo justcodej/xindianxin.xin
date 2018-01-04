@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0px;padding: 0px;list-style: none;}
+		#wrap{
+			width: 1200px;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+		}
+		#wrap ul{
+			width: 244px;
+			height: 40px;
+			margin:100px auto 20px;
+		}
+		#wrap ul li{
+			float: left;
+			width: 120px;
+			height: 100%;
+			background: orange;
+			text-align: center;
+			line-height: 40px;
+			font-size: 20px;
+			cursor: pointer;
+			margin-right: 2px;
+		}
+		#wrap ol{
+			width: 100%;
+			margin-left: 15px;
+		}
+		#wrap ol li{
+			float: left;
+			padding: 5px;
+	
+		}
+		#wrap ol li p{
+			margin-top: 10px;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var oWrap = document.getElementById('wrap');
+			var oUl = document.getElementsByTagName('ul')[0];
+			var aTab = oUl.getElementsByTagName('li');
+			var oOl = document.getElementsByTagName('ol')[0];
+			var aP = oOl.getElementsByTagName('p');
+			var aImg = oOl.getElementsByTagName('img');
+			var onOff = true;
+			var arr = [];
+			var arr2 = ['1.黑白横条衣','2.黑色长风衣','3.秋衣','4.白色卫衣','5.棕色卫衣','6.黑色卫衣','7.花色卫衣','8.卫衣','9.裙子','10.长袖卫衣'];
+
+			aTab[0].onclick = function(){
+				if (onOff) {
+					this.innerHTML = '从小到大';
+					for (var i = 0; i < aP.length; i++) {
+						arr.push( parseInt( aP[i].innerHTML ) )
+						arr.sort(function(a,b){
+							return b-a;
+						})
+					}
+					for (var i = 0; i < arr.length; i++) {
+						aImg[i].src = 'images/'+ arr[i] +'.jpg';
+						var n = arr[i];
+						aP[i].innerHTML = arr2[n-1];
+					};
+					arr.length = 0;
+				}else{
+					this.innerHTML = '从大到小';
+					for (var i = 0; i < aP.length; i++) {
+						arr.push( parseInt( aP[i].innerHTML ) )
+						arr.sort(function(a,b){
+							return a-b;
+						})
+					}
+					for (var i = 0; i < arr.length; i++) {
+						aImg[i].src = 'images/'+ arr[i] +'.jpg';
+						var n = arr[i];
+						aP[i].innerHTML = arr2[n-1];
+					};
+					arr.length = 0;
+				}
+				onOff = !onOff;
+			};
+
+			aTab[1].onclick = function(){
+				for (var i = 0; i < aP.length; i++) {
+					arr.push( parseInt( aP[i].innerHTML ) );
+					arr.sort(function(a,b){
+						return Math.round( Math.random() ) - Math.round( Math.random() );
+					});
+				}
+				for (var i = 0; i < arr.length; i++) {
+					aImg[i].src = 'images/'+ arr[i] +'.jpg';
+					var n = arr[i];
+					aP[i].innerHTML = arr2[n-1];
+					
+				}
+				arr.length = 0;
+			};
+		};
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<ul>
+			<li>从大到小</li>
+			<li>乱序</li>
+		</ul>
+		<ol>
+			<li>
+				<img src="images/1.jpg" alt="">
+				<p>1.黑白横条衣</p>
+			</li>
+			<li>
+				<img src="images/2.jpg" alt="">
+				<p>2.黑色长风衣</p>
+			</li>
+			<li>
+				<img src="images/3.jpg" alt="">
+				<p>3.秋衣</p>
+			</li>
+			<li>
+				<img src="images/4.jpg" alt="">
+				<p>4.白色卫衣</p>
+			</li>
+			<li>
+				<img src="images/5.jpg" alt="">
+				<p>5.棕色卫衣</p>
+			</li>
+			<li>
+				<img src="images/6.jpg" alt="">
+				<p>6.黑色卫衣</p>
+			</li>
+			<li>
+				<img src="images/7.jpg" alt="">
+				<p>7.花色卫衣</p>
+			</li>
+			<li>
+				<img src="images/8.jpg" alt="">
+				<p>8.卫衣</p>
+			</li>
+			<li>
+				<img src="images/9.jpg" alt="">
+				<p>9.裙子</p>
+			</li>
+			<li>
+				<img src="images/10.jpg" alt="">
+				<p>10.长袖卫衣</p>
+			</li>
+		</ol>
+	</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+*{margin: 0px;padding: 0px;list-style: none;}
+#con{
+	width: 400px;
+	height: 685px;
+	margin: 300px auto;
+	position: relative;
+}
+#con div{
+	width: 193px;
+	height: 130px;
+	position: absolute;
+	overflow: hidden;
+}
+#con div ul{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#list1{
+	top: 5px;
+	left: 5px;
+}
+#list2{
+	top: 5px;
+	right: 5px;
+}
+#list3{
+	top: 140px;
+	left: 5px;
+}
+#list4{
+	top: 140px;
+	right: 5px;
+}
+#list5{
+	top: 275px;
+	left: 5px;
+}
+#list6{
+	top: 275px;
+	right: 5px;
+}
+#list7{
+	top: 410px;
+	left: 5px;
+}
+#list8{
+	top: 410px;
+	right: 5px;
+}

@@ -1,0 +1,41 @@
+<div id='nav' class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#navbar-collapse'>
+                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+            <a href="/" class='navbar-brand logo'><img class='img-rounded img-responsive' src="/images/qc.png" alt="倾城博客"></a>
+        </div>
+        <div class="collapse navbar-collapse" id='navbar-collapse'>
+            <ul class="nav navbar-nav navbar-right">
+                <li class='active'><a href="/">首页</a></li>
+                <li class='dropdown disabled'>
+                    <a href="javascript:;" class='dropdown-toggle' data-toggle='dropdown'>作品 <span class='caret'></span></a>
+                    <ul class='dropdown-menu'>
+                        <li class='disabled'><a href="javascript:;">Javascript / jQuery</a></li>
+                        <li class='disabled'><a href="javascript:;">H5 / CSS3</a></li>
+                        <li class='disabled'><a href="javascript:;">Canvas</a></li>
+                        <li class='disabled'><a href="javascript:;">Bootstrap</a></li>
+                        <li class='divider'></li>
+                        <li class='disabled'><a href="javascript:;">Other</a></li>
+                    </ul>
+                </li>
+                <li class='disabled'><a href="javascript:;">OS</a></li>
+                <li class='disabled'><a href="javascript:;">个人</a></li>
+                <% if(locals.login){ %>
+                <li>
+                    <a href="javascript:;" style="display: inline-block;">
+                        <% if(locals.admin){ %>管理员：<% } %>
+                        <%= locals.login %>
+                    </a>
+                    <% if(locals.admin){ %><a href="/admin/index" style="display: inline-block;">后台</a><% } %>
+                    <a href="/logout" style="display: inline-block;">退出</a>
+                </li>
+                <% }else{ %>
+                <li><a href="/login">登陆</a></li>
+                <li><a href="/reg">注册</a></li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+*{
+	margin:0px;
+	padding:0px;
+	list-style: none;
+}
+#wrap{
+	width: 1010px;
+	height: 450px;
+	margin:100px auto;
+	position: relative;
+}
+#wrap ul{
+	height: 450px;
+	width: 1010px;
+}
+#wrap ul li{
+	float:left;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+#wrap ol{
+	position: absolute;
+	bottom: 20px;
+	left: 44%;
+	width: 154px;
+	height: 20px;
+}
+#wrap ol li{
+	float: left;
+	width: 20px;
+	height: 20px;
+	border-radius:100%;
+	background: #eee;
+	cursor: pointer;
+	margin-right: 10px;
+}
+#wrap ol .on{
+	background: orange;
+}
+p{
+	width:30px;
+	height: 90px;
+	position:absolute;
+	top: 180px;
+	background: #ddd;
+	cursor:pointer;
+}
+#btn #left{
+	left: 0px;
+}
+#btn #right{
+	right:0px;
+}

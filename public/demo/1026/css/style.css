@@ -1,0 +1,135 @@
+*{
+
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: block;
+}
+#tip{
+	background: #fff;
+	border-radius: 2px;
+	width: 200px;
+	height: 50px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -25px;
+	margin-left: -100px;
+	border: 1px solid #eee;
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+	padding-left: 100px;
+	display: none;
+}
+#tip p{
+	width: 100%;
+	height: 100%;
+	line-height: 50px;
+}
+#tip i{
+	position: absolute;
+	top: 10px;
+	left: 40px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(../images/icon.png) no-repeat -180px 0;
+}
+#bg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.2);
+	display: none;
+}
+#bg .alert{
+	position: absolute;
+	left: 50%;
+	margin-left: -180px;
+	bottom: -200px;
+	width: 360px;
+	height: 173px;
+	box-shadow: 0 0 50px rgba(0,0,0,.5);
+	background: #fff;
+}
+#bg .alert .title{
+	height: 40px;
+	background: #F8F8F8;
+	position: relative;
+	cursor: move;
+}
+#bg .alert .title>p{
+	line-height: 40px;
+	position: absolute;
+	left: 10px;
+}
+#bg .alert .title .icon{
+	display: block;
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	width: 12px;
+	height: 12px;
+	background: url(../images/icon.png) no-repeat 0 -42px;
+	cursor: pointer;
+}
+#bg .alert .text{
+	position: absolute;
+	width: 100%;
+	height: 133px;
+}
+#bg .alert .text .smile{
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	width: 30px;
+	height: 30px;
+	margin-top: -40px;
+	background: url(../images/icon.png) no-repeat -180px 0;
+}
+#bg .alert button{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	padding: 5px 15px;
+	border:none;
+	background: #3D9EED;
+	border-radius: 3px;
+	font-size: 14px;
+	cursor: pointer;
+	color: #fff;
+	outline: none;
+	transition: .2s;
+}
+#bg .alert button:hover{
+	background: #1B7CED;
+}
+#bg .alert .text p{
+	margin: 30px 0 0 55px;
+	width: 320px;
+	font-size: 14px;
+	color: #333;
+}
+#wrap{
+	width: 600px;
+	padding: 25% 30%;
+}
+div{
+	height: 10px;
+}
+.btn{
+	padding: 2px 10px;
+	background: #3D9EED;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: .3s;
+}
+label.space{
+	padding: 2px 63px;
+}
+.btn:hover{
+	background: #1B7CED;
+}

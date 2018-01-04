@@ -1,0 +1,578 @@
+/*页面初始化*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+/*网页背景*/
+body {
+  overflow: hidden;
+}
+/*手机外部*/
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e7191a url(../images/bg.jpg) no-repeat 50% 0;
+}
+/*主体开始*/
+#content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  margin-top: -333.5px;
+  margin-left: -187px;
+  width: 375px;
+  height: 667px;
+  overflow: hidden;
+}
+#content .zzc{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0);
+  transition: .2s linear;
+  cursor:pointer;
+}
+#content>.bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: url(../images/singer/1.jpg) no-repeat center;
+  background-size: 100% 100%;
+  filter: blur(35px);
+  overflow: hidden;
+}
+#content .bg .box{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+}
+#svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -410px;
+  margin-left: -200px;
+  width: 400px;
+  height: 821px;
+  border-radius: 30px;
+  box-shadow: 20px 20px 10px rgba(0,0,0,.5);
+}
+/*头部*/
+#content .header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+
+}
+#content .header .top{
+  position: relative;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+#content .header .top .signal{
+  width: 150px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+}
+#content .header .top .signal ul li{
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: #fff;
+  float: left;
+  margin:5px 0 0 3px;
+  border:1px solid #fff;
+}
+#content .header .top .signal .zgyd{
+  position: absolute;
+  top: 0;
+  left: 57px;
+  font-size: 12px;
+  color: #fff;
+}
+#content .header .top .signal .icon-wifi{
+  position: absolute;
+  top: 2px;
+  left: 112px;
+  color: #fff;
+}
+#content .header .top .time{
+  position: absolute;
+  top:5px;
+  left: 50%;
+  color: #fff;
+  font-size: 13px;
+}
+#content .header .top .battery{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 20px;
+}
+#content .header .top .battery .icon-lock{
+  position: absolute;
+  top: 5px;
+  left: 0;
+  color: #fff;
+}
+#content .header .top .battery .icon-dianchi-copy{
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-size: 30px;
+  color: orange;
+}
+#content .header .bottom{
+  width: 100%;
+  height: 44px;
+  position: relative;
+}
+#content .header .bottom .icon-yuyin{
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 30px;
+  color: #ddd;
+  z-index: 3;
+  cursor: pointer;
+}
+#content .header .bottom .title{
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+
+}
+#content .header .bottom .title .bigtitle{
+  color: #ddd;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 5px;
+  cursor: default;
+}
+#content .header .bottom .title .subtitle{
+  text-align: center;
+  color: #ddd;
+  font-size: 12px;
+  cursor: default;
+}
+#content .header .bottom .icon-fenxiang{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  z-index: 3;
+  font-size: 25px;
+  cursor: pointer;
+}
+/*头部结束*/
+#content .show{
+  position: absolute;
+  top: 72px;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 495px;
+}
+#content .show .first,#content .show .second{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#content .show .first{
+  display: block;
+}
+#content .show .second{
+  display: none;
+}
+#content .show .second .volume{
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 100%;
+  height: 20px;
+}
+#content .show .second .volume .icon-tubiao1yinliang{
+  color: rgba(255,255,255,.7);
+  font-size: 25px;
+}
+#content .show .second .volume .line{
+  position: absolute;
+  top: 12px;
+  left: 30px;
+  width: 280px;
+  height: 1px;
+  background: rgba(255,255,255,.7);
+}
+#content .show .second .lyric{
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 100%;
+  height: 463px;
+  cursor: pointer;
+  overflow: hidden;
+}
+#content .show .second .lyric .con{
+  
+}
+#content .show .second .lyric .con p{
+  height:20px;
+  color: rgba(255,255,255,.9);
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+}
+#content .show .second .volume .volume-btn{
+  position: absolute;
+  top: -4px;
+  left: 280px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+}
+#content .show .first .haibao{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -105px;
+  margin-left: -105px;
+  width: 210px;
+  height: 210px;
+  background: url(../images/singer/1.jpg) no-repeat center;
+  background-size: cover;
+}
+#content .show .first .cd2{
+  width: 116px;
+  height: 172px;
+  position: absolute;
+  top: 0px;
+  left: 172px;
+  background: url(../images/cd2.png);
+  z-index: 1;
+  transform-origin: 15px 0px;
+  transform: rotateZ(-30deg);
+  /*animation: cd2 1s linear;*/
+  animation-fill-mode: forwards;
+}
+#content .show .first .cd3{
+  position: absolute;
+  top: -16px;
+  left: 176px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+@keyframes cd2{
+  from { transform: rotateZ(-30deg); }
+  to { transform: rotateZ(0deg); }
+}
+@keyframes cd3{
+  from { transform: rotateZ(0deg); }
+  to { transform: rotateZ(-30deg); }
+}
+#content .show .first .cd{
+  width: 310px;
+  height: 310px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius:100%;
+  margin-left: -155px;
+  margin-top: -155px;
+  background: url(../images/singlecover.png) no-repeat center;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+@keyframes cd{
+  from { transform: rotateZ(0deg); }
+  to { transform: rotateZ(360deg); }
+}
+#content .show .first .function{
+  position: absolute;
+  left: 55px;
+  bottom: 10px;
+}
+#content .show .first .function ul li{
+  float: left;
+  color: rgba(255,255,255,.6);
+  font-size: 25px;
+  margin-right: 55px;
+  position: relative;
+  cursor: pointer;
+}
+#content .show .first .function ul li:hover{
+  color: rgba(255,255,255,.8);
+}
+#content .show .first .function ul li:nth-of-type(3)>span{
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  height: 25px;
+  display: block;
+  font-size: 12px;
+  color: #fff;
+}
+#content .show .first .function ul li:nth-of-type(1),#content .show .function ul li:nth-of-type(3){
+  line-height: 36px;
+}
+#content .music-time{
+  position: absolute;
+  left:0;
+  bottom: 80px;
+  width: 100%;
+  height: 20px;
+}
+#content .music-time .music-start{
+  position: absolute;
+  font-size: 12px;
+  color: rgba(255,255,255,.5);
+  margin-left: 10px;
+  z-index: 3;
+}
+#content .music-time .music-line .line{
+  position: absolute;
+  left: 50px;
+  top: 8px;
+  z-index: 3;
+  width: 270px;
+  height: 1px;
+  background: rgba(255,255,255,.4);
+}
+#content .music-time .music-line .process-btn{
+  display: block;
+  position: absolute;
+  top: -7px;
+  left: 0px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background: #fff;
+  z-index: 3;
+  cursor: pointer;
+  transition: 1s;
+}
+#content .music-time .music-line .process-btn>span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  margin-left: -2.5px;
+  margin-top: -2.5px;
+  border-radius: 100%;
+  background: red;
+}
+#content .music-time .music-end{
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,.5);
+  z-index: 3;
+}
+#content .ctrl{
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+}
+#content .ctrl>div:nth-child(1){
+  margin-left: 15px;
+}
+#content .ctrl>.iconfont{
+  color: rgba(255,255,255,.7);
+  font-size: 35px;
+  float: left;
+  margin-right: 35px;
+  cursor: pointer;
+}
+#content .ctrl>.iconfont:nth-child(3){
+  font-size: 55px;
+  line-height: 40px;
+}
+#content .ctrl>.iconfont:hover{
+  color: rgba(255,255,255,.9);
+}
+#content .ctrl .list{
+ width: 100%;
+ height: 440px;
+ position: absolute;
+ left: 0;
+ bottom: -440px;
+ overflow: hidden;
+ z-index: 3;
+ border-top-left-radius: 10px; 
+ border-top-right-radius: 10px;
+ opacity: .9;
+ transition: .2s linear;
+}
+#content .ctrl .list>.bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #292929;
+}
+#content .ctrl .list .title{
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  border-top: 1px solid rgba(0,0,0,.1);
+  position:relative;
+}
+#content .ctrl .list .title .left{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding:10px;
+}
+#content .ctrl .list .title .right{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding:10px;
+  width: 140px;
+}
+#content .ctrl .list .title .left .tubiao{
+  cursor: pointer;
+}
+#content .ctrl .list .title .left .tubiao .icon-ttpodicon{
+  color: rgba(255,255,255,.7);
+  font-size: 25px;
+}
+#content .ctrl .list .title .left .tubiao span:nth-child(2){
+  color: rgba(255,255,255,.7);
+  margin-left: 10px;
+}
+#content .ctrl .list .title .right .tubiao:hover span{
+  color: rgba(255,255,255,.9);
+}
+#content .ctrl .list .title .right .tubiao:nth-child(1){
+  position: absolute;
+  top: 12px;
+  left: 0px;
+  cursor: pointer;
+}
+#content .ctrl .list .title .right .tubiao:nth-child(2){
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  cursor: pointer;
+}
+#content .ctrl .list .title .right .tubiao .icon-lajitong,#content .ctrl .list .title .right .tubiao .icon-llstoredetailfollowadd{
+  color: rgba(255,255,255,.7);
+  font-size: 20px;
+  margin-right: 10px;
+}
+#content .ctrl .list .title .right .tubiao span:nth-child(2){
+  color: rgba(255,255,255,.7);
+}
+#content .ctrl .list ul{
+  position: absolute;
+  top: 62px;
+  left: 0;
+  width: 100%;
+  height: 328px;
+  overflow-y:auto;
+}
+
+#content .ctrl .list ul .on{
+  background: #191919;
+}
+#content .ctrl .list ul li{
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  color: rgba(255,255,255,.9);
+  font-size: 14px;
+  line-height: 40px;
+  text-indent: 10px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  z-index: 4;
+}
+#content .ctrl .list ul li:hover{
+  background: #191919;
+}
+#content .ctrl .list .close{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: #292929;
+  color: rgba(255,255,255,.7);
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 4;
+}
+#content .ctrl .list .close:hover{
+  background: #191919;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

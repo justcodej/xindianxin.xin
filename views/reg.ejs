@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/platform-1.css">
+</head>
+<body>
+<div class="page">
+<div class="form-div">
+    <form id="reg-form" action="/reg" method="post">
+        <div class="margin-box">
+            <div><label for="">用户名</label><input name="uid" autofocus type="text" id="uid" easyform="length:4-16;char-normal;real-time;" easytip="disappear:lost-focus;theme:blue;" ajax-message="用户名已存在!"></div>
+            <div><label for="">密码</label><input name="psw1" type="password" id="psw1" easyform="length:6-16;" easytip="disappear:lost-focus;theme:blue;"></div>
+            <div><label for="">确认密码</label><input name="psw2" type="password" id="psw2" easyform="length:6-16;equal:#psw1;" easytip="disappear:lost-focus;theme:blue;"></div>
+        </div>
+        <div class="buttons">
+            <a href="/"><input type="button" value="<< 返回首页"></a>
+            <a href="/login"><input value="我有账号，我要登录" type="button" style="margin-right:45px; margin-top:20px;"></a>
+            <input value="注 册" class="submit" type="submit" style="margin-right:20px; margin-top:20px;">
+        </div>
+        <br class="clear">
+    </form>
+</div>
+</div>
+<div id="div-username" style="text-align: left; display: none; position: absolute; left: 876px; top: 120px;">
+    <div class="text" style="text-align: left; padding: 10px; min-width: 120px; color: rgb(255, 255, 255); background-color: rgba(51, 153, 204, 0.8); border: 1px solid rgb(102, 153, 204); border-radius: 5px;">用户名必须为6—16位的英文字母或数字</div>
+    <div class="arrow" style="padding: 0px; margin: 0px; width: 0px; height: 0px; position: absolute; border-width: 10px; border-style: solid; border-image: initial; border-color: transparent rgb(102, 153, 204) transparent transparent; left: -20px; top: 12px;"></div>
+</div>
+<div id="div-password" style="text-align: left; display: none; position: absolute; left: 876px; top: 170px;">
+    <div class="text" style="text-align: left; padding: 10px; min-width: 120px; color: rgb(255, 255, 255); background-color: rgba(51, 153, 204, 0.8); border: 1px solid rgb(102, 153, 204); border-radius: 5px;">格式有误，请输入6~12位的数字、字母或特殊字符，不能是纯数字或纯英文</div>
+    <div class="arrow" style="padding: 0px; margin: 0px; width: 0px; height: 0px; position: absolute; border-width: 10px; border-style: solid; border-image: initial; border-color: transparent rgb(102, 153, 204) transparent transparent; left: -20px; top: 12px;"></div>
+</div>
+<div id="div-password2" style="text-align: left; display: none; position: absolute; left: 876px; top: 243px;">
+    <div class="text" style="text-align: left; padding: 10px; min-width: 120px; color: rgb(255, 255, 255); background-color: rgba(51, 153, 204, 0.8); border: 1px solid rgb(102, 153, 204); border-radius: 5px;">两次密码输入要一致</div>
+    <div class="arrow" style="padding: 0px; margin: 0px; width: 0px; height: 0px; position: absolute; border-width: 10px; border-style: solid; border-image: initial; border-color: transparent rgb(102, 153, 204) transparent transparent; left: -20px; top: 12px;"></div>
+</div>
+<script src="/js/jquery-1.12.1.min.js"></script>
+<script src="/js/reg-form.js"></script>
+</body>
+</html>

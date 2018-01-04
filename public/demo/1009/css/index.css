@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  background: #f0f0f0;
+}
+#box {
+  width: 10rem;
+  height: 3.8961039rem;
+  box-sizing: boder-box;
+}
+#box .left {
+  width: 4.41558442rem;
+  height: 100%;
+  float: left;
+  margin-right: 0.02597403rem;
+}
+#box .left a {
+  width: 100%;
+  height: 100%;
+}
+#box .left a img {
+  width: 100%;
+  heiht: 100%;
+}
+#box .right {
+  float: left;
+  width: 5.54545455rem;
+  height: 100%;
+}
+#box .right ul .top {
+  margin-bottom: 0.02597403rem;
+}
+#box .right ul li {
+  width: 100%;
+  height: 150 77rem;
+}
+#box .right ul li a {
+  width: 100%;
+  height: 100%;
+}
+#box .right ul li a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
